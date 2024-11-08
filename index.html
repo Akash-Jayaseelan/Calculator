@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - Akash</title>
+</head>
+<style>
+    button{
+        border-radius: 5px;
+        border-image-outset: 1000px;
+        width: 130px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight:bold;
+    }
+    input{
+        border-radius: 5px;
+        border-image-outset: 1000px;
+        width: 80px;
+        height: 25px;
+    }
+    body{
+        font-size: large;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: antiquewhite;
+        color: rgb(0, 0, 0);
+    }
+    .maincontainer{
+        border: 3px solid black;
+        border-radius: 30px;
+        background-color:white;
+        text-align: center;
+        padding: 50px;
+    }
+    .mainpadding{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .titlepadding{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 4rem;
+    }
+    title{
+        background-color: antiquewhite;
+        border: 2px solid black;
+    }
+    .titlecontainer{
+        border: 3px solid black;
+        border-radius: 30px;
+        background-color:white;
+        text-align: center;
+        padding: 10px;
+    }
+    footer{
+        text-align: center;
+    }
+    .footerimage{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+</style>
+<body>
+    <main>
+        <div class="titlepadding">
+            <div class="titlecontainer"> 
+                <div class="title"><h1 style="font-size: 45px;">Calculator</h1></div>
+                <p><b>Hai!, It is a calculator program, here you can perform Addition, Subtraction, Multiplication and Division by entering any two numbers in the boxes and pressing these buttons for what operation you want to perform</b></p>
+            </div>
+        </div>
+        <div class="mainpadding">
+            <div class="maincontainer">
+                <form>
+                    <center>
+                        <table>
+                            <tr>
+                                <label for="first">
+                                    <th>Enter First Number</th>
+                                    <td></td>
+                                    <td><input type="number" id="first"></td>
+                                </label>
+                            </tr>
+                            <tr>
+                                <label for="second">
+                                    <th>Enter Second Number</th>
+                                    <td></td>
+                                    <td><input type="number" id="second"></td> 
+                                </label>
+                            </tr>
+                        </table>
+                    </center>
+                </form>
+            
+                <br>
+                <button title="Button for Adding two numbers" onclick="add()">Addition</button>
+                <br>
+                <br>
+                <button title="Button for Subtracting two numbers" onclick="sub()">Subtraction</button>
+                <br>
+                <br>
+                <button title="Button for Multiplicating two numbers" onclick="mult()">Multiplication</button>
+                <br>
+                <br>
+                <button title="Button for Dividing two numbers" onclick="div()">Division</button>
+                <p><b>Result</b></p>
+                <h1 id="result"></h1>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <footer>
+            <p>Ph: 9842556217</p>
+                <p>E-mail: akash.bca.grad@gmail.com</p>
+                <p>&copy; 2023 AKASH J</p>
+                <div class="footerimage">
+                    <div>
+                        <a href="https://www.linkedin.com/in/akashjayaseelan/" target="_blank" rel="noopener noreferrer">
+                            <img src="LinkedIn.png" alt="LinkedIn Logo" height="40" width="40">
+                        </a>
+                    </div>
+                    &nbsp;&nbsp;
+                    <div>
+                        <a href="https://github.com/Akash-Jayaseelan" target="_blank" rel="noopener noreferrer">
+                            <img src="GitHub.png" alt="GitHub Logo" height="40" width="40"> 
+                        </a>
+                    </div>
+                </div>
+        </footer>
+
+        <script>
+            var box1= document.getElementById("first");
+            var box2= document.getElementById("second");
+            var outputbox=document.getElementById("result");
+            function add(){
+                var box1value=Number(box1.value);
+                var box2value=Number(box2.value);
+                var finaloutput=box1value+box2value;
+                outputbox.textContent=finaloutput;
+            }
+            function sub(){
+                var box1value=Number(box1.value);
+                var box2value=Number(box2.value);
+                var finaloutput=box1value-box2value;
+                outputbox.textContent=finaloutput;
+            }
+            function mult(){
+                var box1value=Number(box1.value);
+                var box2value=Number(box2.value);
+                var finaloutput=box1value*box2value;
+                outputbox.textContent=finaloutput;
+            }
+            function div(){
+                var box1value=Number(box1.value);
+                var box2value=Number(box2.value);
+                var finaloutput=box1value/box2value;
+                outputbox.textContent=finaloutput;
+            }
+            
+        </script>
+    </main>
+</body>
+</html>
